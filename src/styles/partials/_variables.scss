@@ -2,20 +2,11 @@
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
 
-// //primary colors
-// $primaryDark: #2e3133; 
-// $primaryLight: #a7d9c9; 
-// $primaryWhite: #ffffff;
-
-
-// //secondary colors
-// $secondaryDark: #6e7b87;
-// $secondaryLight: #d7e2ea;
-
-// //background colors
-// $backgroundDark: #445a67;
-// $backgroundLight: #f6f7fb;
-
-// //support colors
-// $green: #158463;
-// $red: #c94515;
+// colors
+$primary: #adbab7; // main headings, buttons and key elements
+$secondary-white: #ffffff; // backgrounds
+$secondary-black: #000000; // texts and secondary details
+$secondary-brown: #86756a; // alterative text color
+$accent-orange: #fbbb85; // ideal for logo/standoung highlights
+$accent-blue: #6a7d93; // additional highlights for subtle details
+$accent-purple: #d1c2d9; // additional highlights for subtle details

@@ -1,3 +1,5 @@
+@use '../../styles/partials/mixins' as *;
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -12,18 +14,54 @@
     font-size: 2rem;
   }
 
-  &__links {
+  &__nav {
+    display: none; // Hide navigation by default on mobile
+
+    &--open {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &-item {
+      margin: 0.5rem 0;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  &__toggle {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+// Tablet and above
+@include tablet {
+  .header__nav {
     display: flex;
-    align-items: center;
+    flex-direction: row;
 
-    &--left {
-      padding-left: 1.25rem;
-      align-self: left;
+    &-list {
+      flex-direction: row;
     }
 
-    &--right {
-      padding-right: 1.25rem;
-      align-self: right;
+    &-item {
+      margin: 0 1rem;
     }
+  }
+
+  .header__toggle {
+    display: none;
   }
 }
