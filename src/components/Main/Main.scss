@@ -1,0 +1,62 @@
+main {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 2.1875rem;
+}
+
+.card {
+  width: 9.375rem;
+  height: 12.5rem;
+  margin: 0.625rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: #eeeeee;
+  box-shadow: 3px 3px 3px #aaaaaa;
+  border-radius: 5px;
+  flex-wrap: wrap;
+
+  &__content {
+    flex: 0 0 100%;
+    justify-self: center;
+    text-align: center;
+  }
+
+  &__title {
+    flex: 0 0 100%;
+    text-align: center;
+    border-top: dashed 1px #555555;
+    padding-top: 0.9375rem;
+  }
+}
+
+.activity-list {
+  background: #dddddd;
+  padding: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.activity-list > * {
+  flex: 0 0 100%;
+}
+
+.activity-list__item {
+  width: 18.75rem;
+  height: 9.375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  margin: 0.625rem 0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #999999;
+}
