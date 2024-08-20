@@ -1,67 +1,188 @@
+@use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  height: 3.125rem;
-  background: #999999;
-  border-bottom: solid 1px;
+  background-color: $primary;
+  border-bottom: 1px solid $secondary-black;
+  position: relative;
   z-index: 10;
 
-  &__logo {
+  &__container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    max-width: $desktop-breakpoint;
+    margin: 0 auto;
   }
 
-  &__nav {
-    display: none; // Hide navigation by default on mobile
+  &__toggle,
+  &__login {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
 
-    &--open {
-      display: flex;
-      flex-direction: row;
+    &:hover,
+    &:focus {
+      background-color: rgba($secondary-white, 0.2);
     }
+  }
 
-    &-list {
-      display: flex;
-      flex-direction: column;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+  &__icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    display: block;
+  }
 
-    &-item {
-      margin: 0.5rem 0;
-    }
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
 
     &-link {
       text-decoration: none;
-      color: white;
+      color: $secondary-black;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
     }
   }
 
-  &__toggle {
+  &__nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: $primary;
+    padding: 1rem;
+    display: none;
+
+    &--open {
+      display: block;
+    }
+  }
+
+  &__nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+  }
+
+  &__nav-item {
+    margin-bottom: 0.5rem;
+  }
+
+  &__nav-link {
+    color: $secondary-black;
+    text-decoration: none;
+    font-size: 1.1rem;
     display: block;
-    cursor: pointer;
+    padding: 0.5rem;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-orange;
+      color: $secondary-black;
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+
+    &--desktop {
+      display: none;
+    }
+
+    &-input {
+      flex-grow: 1;
+      padding: 0.5rem;
+      border: 1px solid $secondary-black;
+      border-right: none;
+      font-size: 1rem;
+    }
+
+    &-button {
+      background-color: $secondary-white;
+      border: 1px solid $secondary-black;
+      padding: 0.5rem;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        background-color: $accent-orange;
+      }
+    }
+  }
+
+  &__visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 }
 
-// Tablet and above
 @include tablet {
-  .header__nav {
-    display: flex;
-    flex-direction: row;
+  .header {
+    &__container {
+      flex-wrap: wrap;
 
-    &-list {
-      flex-direction: row;
     }
 
-    &-item {
-      margin: 0 1rem;
+    &__toggle {
+      display: none;
     }
-  }
 
-  .header__toggle {
-    display: none;
+    &__nav {
+      position: static;
+      display: block;
+      padding: 0;
+      background-color: transparent;
+      order: 2;
+      flex-basis: 100%;
+    }
+
+    &__nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__nav-list {
+      display: flex;
+      margin: 0;
+    }
+
+    &__nav-item {
+      margin: 0 1rem 0 0;
+    }
+
+    &__nav-link {
+      padding: 0.5rem 0;
+    }
+
+    &__search {
+      &--mobile {
+        display: none;
+      }
+
+      &--desktop {
+        display: flex;
+        order: 3;
+        margin-right: 1rem;
+      }
+    }
+
+    &__login {
+      order: 4;
+    }
   }
 }

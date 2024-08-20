@@ -9,7 +9,7 @@ function App() {
 		<div className='App'>
 			<BrowserRouter>
 				<Header />
-				<Routes>
+				{/* <Routes>
 					<Route path='/' element={<h1>Home Page</h1>} />
 					<Route path='/about' element={<h1>About Page</h1>} />
 					<Route path='/blog' element={<h1>Blog Page</h1>} />
@@ -17,8 +17,8 @@ function App() {
 					<Route path='/contact' element={<h1>Contact Page</h1>} />
 					<Route path='/recipes' element={<h1>Recipes Page</h1>} />
 					<Route path='/recipes/:id' element={<h1>Recipe Page</h1>} />
-				</Routes>
-				<Footer />
+				</Routes> */}
+				{/* <Footer /> */}
 			</BrowserRouter>
 		</div>
 	);

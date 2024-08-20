@@ -12,103 +12,173 @@
     }
 }
 
-// // Page Header 
-// @mixin m-h1 {
-//     font-size: 1.75rem;
-//     line-height: 2.25rem;
-//     font-weight: 600;
-// }
+// Mobile Mixins (under 768px)
 
-// // Subheader
-// @mixin m-h2 {
-//     font-size: 1.25rem;
-//     line-height: 1.75rem;
-//     font-weight: 600;
-// }
+// Page Header 
+@mixin m-h1 {
+    font-family: $secondary-font;
+    font-size: 1.75rem; // 28px
+    line-height: 2.25rem; // 36px
+    font-weight: 700;
+}
 
-// // Labels, Links & Buttons
-// @mixin m-h3 {
-//     font-size: .8125rem;
-//     line-height: 1.25rem;
-//     font-weight: 600;
-// }
+// Section Header
+@mixin m-h2 {
+    font-family: $primary-font;
+    font-size: 1.25rem; // 20px
+    line-height: 1.75rem; // 28px
+    font-weight: 700;
+}
 
-// //Tabel Header
-// @mixin m-h4 {
-//     font-size: .6875rem;
-//     line-height: 1rem;
-//     font-weight: 600;
-//     text-transform: uppercase;
-// }
+// Subheader
+@mixin m-h3 {
+    font-family: $primary-font;
+    font-size: 1rem; // 16px
+    line-height: 1.375rem; // 22px
+    font-weight: 700;
+}
 
-// // Body Large
-// @mixin m-p1 {
-//     font-size: .9375rem;
-//     line-height: 1.625rem;
-//     font-weight: 400;
-// }
+// Labels & Buttons
+@mixin m-h4 {
+    font-family: $primary-font;
+    font-size: 0.75rem; // 12px
+    line-height: 1.125rem; // 18px
+    font-weight: 700;
+    text-transform: uppercase;
+}
 
-// // Body Medium
-// @mixin m-p2 {
-//     font-size: .8125rem;
-//     line-height: 1.25rem;
-//     font-weight: 400;
-// }
+// Body Large
+@mixin m-p1 {
+    font-family: $primary-font;
+    font-size: 0.875rem; // 14px
+    line-height: 1.25rem; // 20px
+    font-weight: 400;
+}
 
-// // Body Small
-// @mixin m-p3 {
-//     font-size: .6875rem;
-//     line-height: 1rem;
-//     font-weight: 400;
-// }
+// Body Medium
+@mixin m-p2 {
+    font-family: $primary-font;
+    font-size: 0.8125rem; // 13px
+    line-height: 1.1875rem; // 19px
+    font-weight: 400;
+}
 
+// Body Small
+@mixin m-p3 {
+    font-family: $primary-font;
+    font-size: 0.75rem; // 12px
+    line-height: 1.125rem; // 18px
+    font-weight: 400;
+}
 
-// // Page Header
-// @mixin dt-h1 {
-//     font-size: 2rem;
-//     line-height: 2.5rem;
-//     font-weight: 600;
-// }
+// Desktop/Tablet Mixins (768px and above)
 
-// // Subheader
-// @mixin dt-h2 {
-//     font-size: 1.5rem;
-//     line-height: 2rem;
-//     font-weight: 600;
-// }
+// Page Header
+@mixin dt-h1 {
+    font-family: $secondary-font;
+    font-size: 2.25rem; // 36px
+    line-height: 3rem; // 48px
+    font-weight: 700;
+}
 
-// // Labels, Links & Buttons
-// @mixin dt-h3 {
-//     font-size: 0.875rem;
-//     line-height: 1.375rem;
-//     font-weight: 600;
-// }
+// Section Header
+@mixin dt-h2 {
+    font-family: $primary-font;
+    font-size: 1.5rem; // 24px
+    line-height: 2rem; // 32px
+    font-weight: 700;
+}
 
-// // Table Header
-// @mixin dt-h4 {
-//     font-size: .75rem;
-//     line-height: 1.125rem;
-//     font-weight: 600;
-//     text-transform: uppercase;
-// }
+// Subheader
+@mixin dt-h3 {
+    font-family: $primary-font;
+    font-size: 1.125rem; // 18px
+    line-height: 1.5rem; // 24px
+    font-weight: 700;
+}
 
-// // Body Large
-// @mixin dt-p1 {
-//     font-size: 1rem;
-//     line-height: 1.75rem;
-//     font-weight: 400;
-// }
+// Labels & Buttons
+@mixin dt-h4 {
+    font-family: $primary-font;
+    font-size: 0.875rem; // 14px
+    line-height: 1.25rem; // 20px
+    font-weight: 700;
+    text-transform: uppercase;
+}
 
-// // Body Medium
-// @mixin dt-p2 {
-//     font-size: .875rem;
-//     line-height: 1.375rem;
-//     font-weight: 400;
-// }
+// Body Large
+@mixin dt-p1 {
+    font-family: $primary-font;
+    font-size: 1rem; // 16px
+    line-height: 1.5rem; // 24px
+    font-weight: 400;
+}
 
-// // Body Small
-// @mixin dt-p3 {
-//     font-size: .75rem;
-//     line-height: 1.125rem;
-//     font-weight: 400;
-// }
+// Body Medium
+@mixin dt-p2 {
+    font-family: $primary-font;
+    font-size: 0.9375rem; // 15px
+    line-height: 1.375rem; // 22px
+    font-weight: 400;
+}
+
+// Body Small
+@mixin dt-p3 {
+    font-family: $primary-font;
+    font-size: 0.875rem; // 14px
+    line-height: 1.25rem; // 20px
+    font-weight: 400;
+}
+
+// New mixins for specific components
+
+// Recipe Card Title
+@mixin recipe-card-title {
+    font-family: $secondary-font;
+    font-size: 1.25rem; // 20px
+    line-height: 1.5rem; // 24px
+    font-weight: 700;
+}
+
+// Recipe Meta Info
+@mixin recipe-meta {
+    font-family: $primary-font;
+    font-size: 0.75rem; // 12px
+    line-height: 1rem; // 16px
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+// Blog Post Date
+@mixin blog-post-date {
+    font-family: $primary-font;
+    font-size: 0.8125rem; // 13px
+    line-height: 1.125rem; // 18px
+    font-weight: 400;
+    font-style: italic;
+}
+
+// Navigation Links
+@mixin nav-links {
+    font-family: $primary-font;
+    font-size: 1rem; // 16px
+    line-height: 1.5rem; // 24px
+    font-weight: 600;
+}
+
+// Form Labels
+@mixin form-labels {
+    font-family: $primary-font;
+    font-size: 0.875rem; // 14px
+    line-height: 1.25rem; // 20px
+    font-weight: 600;
+}
+
+// Callout Text
+@mixin callout-text {
+    font-family: $secondary-font;
+    font-size: 1.5rem; // 24px
+    line-height: 2rem; // 32px
+    font-weight: 400;
+    font-style: italic;
+}
